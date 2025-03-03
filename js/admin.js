@@ -14,10 +14,10 @@ input_price.addEventListener("keyup", ({ key }) => {
       return;
     }
 
-    if (!input_img.value.includes("https")) {
-      alert("напишите imgURL");
-      return;
-    }
+    // if (!input_img.value.includes("https")) {
+    //   alert("напишите imgURL");
+    //   return;
+    // }
 
     let obj = {
       name: input_name.value,

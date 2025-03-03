@@ -1,5 +1,5 @@
 let main = document.querySelector(".main");
-
+let modal = document.querySelector(".modal");
 newProduct();
 function newProduct() {
   main.innerHTML = "";
@@ -61,6 +61,10 @@ function newProduct() {
     btn_delete.addEventListener("click", () => {
       deleteProduct(item.id);
     });
+
+    btn_d.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
   });
 }
 
@@ -73,3 +77,9 @@ function deleteProduct(id) {
   );
   newProduct();
 }
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
